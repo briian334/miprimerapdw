@@ -8,6 +8,18 @@
     "theme_color": "#FB324E",
     "orientation":"landscape",
     "lang":"es-MX",
+    "screenshots": [
+      {
+          "src": "screenshot1280x720.jpg",
+          "sizes": "1280x720",
+          "type": "image/jpeg"
+      },
+      {
+          "src": "screenshot720x1280.jpg",
+          "sizes": "720x1280",
+          "type": "image/jpeg"
+      }
+  ],
         "icons": [
             {
               "src": "./img/favicon-16.jpg",
