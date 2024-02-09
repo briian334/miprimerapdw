@@ -12,51 +12,61 @@
             {
               "src": "./img/favicon-16.jpg",
               "sizes": "16x16",
+              "form_factor": "wide",
               "type": "image/jpg"
             },
             {
               "src": "./img/favicon-32.jpg",
               "sizes": "32x32",
+              "form_factor": "wide",
               "type": "image/jpg"
             },
             {
               "src": "./img/favicon-64.jpg",
               "sizes": "64x64",
+              "form_factor": "wide",
               "type": "image/jpg"
             },
             {
               "src": "./img/favicon-96.jpg",
               "sizes": "96x96",
+              "form_factor": "wide",
               "type": "image/jpg"
             },
             {
               "src": "./img/favicon-128.jpg",
               "sizes": "128x128",
+              "form_factor": "wide",
               "type": "image/jpg"
             },
             {
               "src": "./img/favicon-192.jpg",
               "sizes": "192x192",
+              "form_factor": "wide",
               "type": "image/jpg"
             },
             {
               "src": "./img/favicon-256.jpg",
               "sizes": "256x256",
+              "form_factor": "wide",
               "type": "image/jpg"
             },
             {
               "src": "./img/favicon-384.jpg",
               "sizes": "384x384",
+              "form_factor": "wide",
               "type": "image/jpg"
             },
             {
               "src": "./img/favicon-512.jpg",
               "sizes": "512x512",
+              "form_factor": "wide",
               "type": "image/jpg"
             },
             {
               "src": "./img/favicon-1024.jpg",
               "sizes": "1024x1024",
+              "form_factor": "wide",
               "type": "image/jpg"
             }
           ]          
