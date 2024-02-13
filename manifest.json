@@ -10,14 +10,14 @@
     "lang":"es-MX",
     "screenshots": [
       {
-          "src": "screenshot1280x720.jpg",
+          "src": "screenshot1280x720.png",
           "sizes": "1280x720",
-          "type": "image/jpeg"
+          "type": "image/png"
       },
       {
-          "src": "screenshot720x1280.jpg",
+          "src": "screenshot720x1280.png",
           "sizes": "720x1280",
-          "type": "image/jpeg"
+          "type": "image/png"
       }
   ],
         "icons": [
