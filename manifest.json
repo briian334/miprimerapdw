@@ -74,7 +74,8 @@
          {
       "src": "desktop-screenshot.png",
       "sizes": "1920x1080",
-      "type": "image/png"
+      "type": "image/png",
+    "form_factor": "wide"
     }
 ]
   }  
