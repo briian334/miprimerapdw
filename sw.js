@@ -42,7 +42,7 @@ self.addEventListener('activate', e =>{
         .then(cacheNames => {
             return Promise.all(
                 cacheNames.map(cacheNames=>{
-                    if (cacheWhitelist.indexOf(cacheNames)==1) {
+                    if (cacheWhitelist.indexOf(cacheNames)===1) {
                         //borrar elementos que no necesitan
                         return cache.delete(cacheNames);
                     }
