@@ -20,8 +20,7 @@ var urlToCache = [
     './img/favicon-512.jpg',
     './img/favicon-1024.jpg',
     './img/favicon.jpg',
-    './img/screenshot1280x720.png',
-    './img/screenshot720x1280.png'
+    './img/favicon-144.jpg'
 ];
 self.addEventListener('install', e =>{
     e.waitUntil(
