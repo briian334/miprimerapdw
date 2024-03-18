@@ -1,18 +1,40 @@
+#NOMBRE DEL FLUJO DE TRABAJO (PIPELINE)
 name: BuildRepositoryWorkFlow
 
 on:
+  #SERA EJECUTADO CUANDO SE HAGA UN PUSH A LAS SIGUIENTES RAMAS
   push:
-    branches: [ "main", "miRamita" ]
-    
+    branches: ["main", "miRamita"]
+
+  #VA EJECUTAR LOS SIGUIENTES TRABAJOS (PARA COMPILAR)
 jobs:
-
   build:
-    runs-on: ubuntu-latest
-    
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+    runs-on: alpine-latest #SE EJECUTA BAJO EL SO DE LINUX ALPINE
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+    steps:
+      #PASO POR DEFECTO (SE ENCARGA DE CLONAR EL REPOSITORIO ACTUAL EN EL RUNNER)
+      - name: Clonar Repositorio
+        uses: actions/checkout@v3
+      
+      #PASO PARA INSTALAR DEPENDENCIAS NECESARIAS
+      - name: Instalar Dependencias
+        run: npm install
+
+      #PASO PARA ACTUALIZAR DEPENDENCIAS NECESARIAS
+      - name: Actualizar Dependencias
+        run: npm update
+
+      #PASO PARA EJECUTAR LAS PRUEBAS
+      - name: Ejecutar Pruebas Unitarias
+        run: npm test
+        
+      #PASO PARA COMPILAR LA APLICACION
+      - name: Compilar Artefactos
+        run: npm run build
+
+      #PASO PARA GUARDAR LOS ARCHIVOS COMPILADOS COMO ARTEFACTOS
+      - name: Guardar Artefactos
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-app-artifacts
+          path: dist/
