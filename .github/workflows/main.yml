@@ -21,8 +21,26 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: pwa-artifacts
-          path: ./dist
+          path: |
+            index.html
+            about.html
+            contact.html
+            menu.html
+            reservation.html
+            service.html
+            testimonial.html
+            main.js
+            sw.js
+            manifest.json
+            coffee-shop-html-template.jpg
+            desktop-screenshot.png
+            mobile-screenshot.png
+            css/
+            scss/
+            js/
+            img/
 
+      #PASO PARA DESPLEGAR LA PWA
       - name: Desplegar en GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
