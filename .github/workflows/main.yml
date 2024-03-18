@@ -16,25 +16,16 @@ jobs:
       - name: Clonar Repositorio
         uses: actions/checkout@v3
       
-      #PASO PARA INSTALAR DEPENDENCIAS NECESARIAS
-      - name: Instalar Dependencias
-        run: npm install
-
-      #PASO PARA ACTUALIZAR DEPENDENCIAS NECESARIAS
-      - name: Actualizar Dependencias
-        run: npm update
-
-      #PASO PARA EJECUTAR LAS PRUEBAS
-      - name: Ejecutar Pruebas Unitarias
-        run: npm test
-        
-      #PASO PARA COMPILAR LA APLICACION
-      - name: Compilar Artefactos
-        run: npm run build
-
-      #PASO PARA GUARDAR LOS ARCHIVOS COMPILADOS COMO ARTEFACTOS
-      - name: Guardar Artefactos
+      #PASO PARA GUARDAR LOS ARCHIVOS COMPILADOS DE LA PWA COMO ARTEFACTOS
+      - name: Guardar artefactos
         uses: actions/upload-artifact@v3
         with:
-          name: my-app-artifacts
-          path: dist/
+          name: pwa-artifacts
+          path: ./dist
+
+      - name: Desplegar en GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: main
